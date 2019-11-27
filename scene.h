@@ -23,7 +23,6 @@ signals:
    void sendCount(int);
 public slots:
    void addMouse();
-   //override
    void mousePressEvent(QGraphicsSceneMouseEvent *mouseEvent);
    void recivedStarted();
    void recivedStop();

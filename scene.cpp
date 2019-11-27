@@ -77,9 +77,10 @@ void Scene::recivedStop(){
 
 void Scene::mouseMoveEvent(QGraphicsSceneMouseEvent *mouseEvent){
   QString hemer=":/hamer/hammer_up.png";
-   this->hemer.setImage(hemer);
+  this->hemer.setImage(hemer);
   QPointF qp=mouseEvent->scenePos();
-  std::cout<<"x:"<<qp.x()<<"\t y:"<<qp.y()<<std::endl;
+  //Debug..
+  //std::cout<<"x:"<<qp.x()<<"\t y:"<<qp.y()<<std::endl;
   this->hemer.setPos(qp.x()-30,qp.y()-30);
 }
 

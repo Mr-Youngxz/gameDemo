@@ -8,7 +8,8 @@ MainWindow::MainWindow(QWidget *parent)
   ui->setupUi(this);
   scene=new Scene();
   this->ui->view->setScene(this->scene);
-  //当锤子需要移动时候，需要对鼠标时间进行跟踪
+  //when henmer moving,you must enable mouse tracking
+  //当锤子需要移动时候，需要开启对鼠标事件进行跟踪
   this->ui->view->setMouseTracking(true);
   connect(scene,SIGNAL(sendCount(int)),this,SLOT(recivedCount(int)));
   connect(this,SIGNAL(sendStarted()),scene,SLOT(recivedStarted()));
@@ -25,7 +26,6 @@ MainWindow::~MainWindow()
 }
 
 void MainWindow::closeEvent(QCloseEvent *event){
-    std::cout<<"dwdwd\n\n\n\n\n\n"<<std::endl;
     const QString n="确定退出？";
     QMessageBox msg(QMessageBox::Question,n,"确定退出？",QMessageBox::No|QMessageBox::Yes);
     if(msg.exec()==QMessageBox::Yes)
