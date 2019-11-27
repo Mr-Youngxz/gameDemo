@@ -17,20 +17,19 @@ public:
   ~Scene(){
     if(timer!=nullptr)
         delete timer;
-    std::cout<<"Scene Destroyed"<<std::endl;
   }
 
 signals:
    void sendCount(int);
 public slots:
    void addMouse();
+   //override
    void mousePressEvent(QGraphicsSceneMouseEvent *mouseEvent);
    void recivedStarted();
    void recivedStop();
 private:
   void loadImage(std::vector<Item *> & container,QString & source,int x,int y);
   void initial();
-  //std::shared_ptr<Item> miceManager=nullptr;
   std::vector<Item *> imageContainer;
   int micePosition;
   Item * item;
