@@ -1,2 +1,13 @@
-<!DOCTYPE RCC>
-<RCC version="1.0"/>
+<RCC>
+    <qresource prefix="/mouse" lang="jpg/png">
+        <file>mouse_alive.png</file>
+        <file>mouse_attcked.png</file>
+    </qresource>
+    <qresource prefix="/background" lang="jpg/png">
+        <file>bg_hole.png</file>
+    </qresource>
+    <qresource prefix="/hamer" lang="jpg/png">
+        <file>hammer_up.png</file>
+        <file>hammer_down.png</file>
+    </qresource>
+</RCC>
