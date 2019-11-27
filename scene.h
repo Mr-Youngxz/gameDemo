@@ -41,6 +41,7 @@ private:
   bool miceCliked=false;
   std::vector<std::pair<int,int> *> position;
   void mouseMoveEvent(QGraphicsSceneMouseEvent *mouseEvent);
+
 };
 
 #endif // SCENE_H

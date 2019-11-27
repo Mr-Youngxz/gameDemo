@@ -13,7 +13,6 @@ Item::Item(QString & item){
 void Item::setImage(QString & item){
   this->item.load(item);
   this->setPixmap(this->item);
-  std::cout<<"";
 }
 
 

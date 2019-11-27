@@ -31,5 +31,6 @@ private:
   Scene * scene;
   std::shared_ptr<Scene> sceneManager=nullptr;
   void closeEvent(QCloseEvent * event);
+
 };
 #endif // MAINWINDOW_H

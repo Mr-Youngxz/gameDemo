@@ -14,6 +14,7 @@ MainWindow::MainWindow(QWidget *parent)
   connect(scene,SIGNAL(sendCount(int)),this,SLOT(recivedCount(int)));
   connect(this,SIGNAL(sendStarted()),scene,SLOT(recivedStarted()));
   connect(this,SIGNAL(sendStop()),scene,SLOT(recivedStop()));
+
 }
 
 void MainWindow::recivedCount(int count){

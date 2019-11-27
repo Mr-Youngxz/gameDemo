@@ -15,6 +15,7 @@ public:
   void setImage(QString & item);
   QPixmap item;
   bool isMouse=false;
+
 };
 
 #endif // ITEM_H
