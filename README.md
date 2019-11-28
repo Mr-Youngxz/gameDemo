@@ -1,2 +1,2 @@
 # gameDemo
-A Gamedemo create by Qt5
+A Tiny Game Demo , Powered By Qt5
