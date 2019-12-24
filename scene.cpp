@@ -79,8 +79,6 @@ void Scene::mouseMoveEvent(QGraphicsSceneMouseEvent *mouseEvent){
   QString hemer=":/hamer/hammer_up.png";
   this->hemer.setImage(hemer);
   QPointF qp=mouseEvent->scenePos();
-  //Debug..output position from mouse
-  //std::cout<<"x:"<<qp.x()<<"\t y:"<<qp.y()<<std::endl;
   this->hemer.setPos(qp.x()-30,qp.y()-30);
 }
 
