@@ -1,7 +1,6 @@
 # gameDemo
 A Tiny Game Demo【 Study Only】
-Language:C++
-Powered By Qt5
+Language:C++;IDE:Qt5
                           Nov.2019
 
 
