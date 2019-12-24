@@ -23,7 +23,6 @@ LoginWindow::~LoginWindow()
 void LoginWindow::on_sub_btn_clicked()
 {
     if(this->LoginActivity()){
-
         mainPtr=std::shared_ptr<MainWindow>(new MainWindow);
         mainPtr->setWindowModality((Qt::ApplicationModal));
         this->mainPtr->show();
@@ -40,22 +39,20 @@ bool LoginWindow::LoginActivity(){
         const QString par1 =":name";
         query->prepare(sql);
         SHA1 check;
-        //provide user unique
+        //provide user password
         QString account=ui->account->text();
         check.update((account+(ui->password->text())).toLocal8Bit().toStdString());
         QString pwd=QString(check.final().data());
         std::cout<<pwd.toStdString()<<std::endl;
         query->bindValue(par1,account);
         if(query->exec()){
-            std::cout<<"1"<<std::endl;
             if(query->next()&&(query->value(1).toString().compare(pwd))){
-                  std::cout<<"3"<<std::endl;
                   std::cout<<query->value(1).data();
                   return true;
               }
          }
          else
-            std::cout<<"Invaild Account or password"<<endl;
+            std::cout<<"Invaild Account or password"<<std::endl;
         return false;
 }
 
