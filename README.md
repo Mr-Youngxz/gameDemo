@@ -7,7 +7,5 @@ Powered By Qt5
 
 
 # Update Schedule
-1.Account Login panel  (Complished)
-2.Count Table
+online server ..
                Dec.2019
-					m
