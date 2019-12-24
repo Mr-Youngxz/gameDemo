@@ -37,6 +37,7 @@ private:
   QTimer * timer=nullptr;
   int nowX=0;
   int nowY=0;
+  int s=0;
   static int count;
   bool miceCliked=false;
   std::vector<std::pair<int,int> *> position;

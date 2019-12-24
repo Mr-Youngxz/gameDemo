@@ -88,9 +88,9 @@
          </widget>
         </item>
         <item>
-         <widget class="QPushButton" name="cancel_btn">
+         <widget class="QPushButton" name="back_btn">
           <property name="text">
-           <string>Cancel</string>
+           <string>Back</string>
           </property>
          </widget>
         </item>
