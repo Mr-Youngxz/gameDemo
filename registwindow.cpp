@@ -8,11 +8,6 @@ RegistWindow::RegistWindow(QWidget *parent) :
 
   dbconnector=DBCreator();
   dbconnector->open();
-  if(dbconnector->isOpen()){
-       std::cout<<std::string("Active!")<<std::endl;
-  }else{
-       std::cout<<std::string("DataBase No Active!")<<std::endl;
-  }
   ui->setupUi(this);
 }
 
@@ -24,8 +19,6 @@ RegistWindow::~RegistWindow()
 void RegistWindow::on_sub_btn_clicked()
 {
     this->regist();
-        //std::cout<<"clicked"<<std::endl;
-
 }
 
 void RegistWindow::regist(){
