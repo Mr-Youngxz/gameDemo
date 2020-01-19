@@ -66,10 +66,10 @@ void Scene::mousePressEvent(QGraphicsSceneMouseEvent *mouseEvent){
 }
 
 
-void Scene::recivedStarted(){
+void Scene::reciviedStarted(){
     this->timer->start(1000);
 }
-void Scene::recivedStop(){
+void Scene::reciviedStop(){
     //shared_ptr指针重置，销毁对象
     MiceManage.reset();
     this->timer->stop();

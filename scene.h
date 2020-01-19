@@ -24,8 +24,8 @@ signals:
 public slots:
    void addMouse();
    void mousePressEvent(QGraphicsSceneMouseEvent *mouseEvent);
-   void recivedStarted();
-   void recivedStop();
+   void reciviedStarted();
+   void reciviedStop();
 private:
   void loadImage(std::vector<Item *> & container,QString & source,int x,int y);
   void initial();
@@ -34,10 +34,10 @@ private:
   Item * item;
   std::shared_ptr<Item> MiceManage;
   Item hammer;
-  QTimer * timer=nullptr;
-  int nowX=0;
-  int nowY=0;
-  int s=0;
+  QTimer * timer = nullptr;
+  int nowX = 0;
+  int nowY = 0;
+  int s = 0;
   static int count;
   bool miceCliked=false;
   std::vector<std::pair<int,int> *> position;
