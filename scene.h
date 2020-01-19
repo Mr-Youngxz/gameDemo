@@ -33,7 +33,7 @@ private:
   int micePosition;
   Item * item;
   std::shared_ptr<Item> MiceManage;
-  Item hemer;
+  Item hammer;
   QTimer * timer=nullptr;
   int nowX=0;
   int nowY=0;

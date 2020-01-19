@@ -26,6 +26,9 @@ void LoginWindow::on_sub_btn_clicked()
         mainPtr=std::shared_ptr<MainWindow>(new MainWindow);
         mainPtr->setWindowModality((Qt::ApplicationModal));
         this->mainPtr->show();
+
+        this->setHidden(true);
+
     }else{
         QMessageBox::warning(this,"Invaild Info","Invaild Account or Password",QMessageBox::Yes);
     }

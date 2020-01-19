@@ -24,11 +24,10 @@ void Scene::initial(){
         nowX=0;
       }
     }
-  QString hemer=":/hamer/hammer_up.png";
-  this->hemer.setImage(hemer);
-  this->hemer.setPos(0,0);
-  this->addItem(&this->hemer);
-
+  QString hammer=":/hamer/hammer_up.png";
+  this->hammer.setImage(hammer);
+  this->hammer.setPos(0,0);
+  this->addItem(&this->hammer);
 }
 
 void Scene::loadImage(std::vector<Item *> & container,QString & source,int x,int y){
@@ -55,7 +54,7 @@ void Scene::addMouse(){
 void Scene::mousePressEvent(QGraphicsSceneMouseEvent *mouseEvent){
   QString hemer_attacked=":/hamer/hammer_down.png";
   QPointF qp=mouseEvent->scenePos();
-  this->hemer.setImage(hemer_attacked);
+  this->hammer.setImage(hemer_attacked);
   const int x=static_cast<int>((qp.x()/131));
   const int y=static_cast<int>((qp.y()/88));
   if(miceCliked && (x==(nowX/131) && y==(nowY/88))){
@@ -77,10 +76,10 @@ void Scene::recivedStop(){
 }
 
 void Scene::mouseMoveEvent(QGraphicsSceneMouseEvent *mouseEvent){
-  QString hemer=":/hamer/hammer_up.png";
-  this->hemer.setImage(hemer);
+  QString hammer=":/hamer/hammer_up.png";
+  this->hammer.setImage(hammer);
   QPointF qp=mouseEvent->scenePos();
-  this->hemer.setPos(qp.x()-30,qp.y()-30);
+  this->hammer.setPos(qp.x()-30,qp.y()-30);
 }
 
 
