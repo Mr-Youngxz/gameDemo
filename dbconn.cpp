@@ -7,8 +7,8 @@ QSqlDatabase * DBCreator(){
     qdb->setDatabaseName("dev");
     qdb->setHostName("localhost");
     qdb->setPort(5555);      //Postgresql port
-    qdb->setUserName("");    //user name
-    qdb->setPassword("");   //You PostgreSQL password
+    qdb->setUserName("postgres");    //user name
+    qdb->setPassword("11111111");   //You PostgreSQL password
     return qdb;
 }
 

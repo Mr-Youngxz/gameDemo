@@ -14,9 +14,10 @@ Scene::Scene(QObject *parent) :QGraphicsScene(parent)
 
 void Scene::initial(){
   QString hole=":/background/bg_hole.png";
+  position.reserve(16);
   for(int i=1;i<=16;i++){
       loadImage(imageContainer,hole,nowX,nowY);
-      position.push_back(new std::pair<int,int>(nowX,nowY));
+      position.emplace_back(new std::pair<int,int>(nowX,nowY));
       nowX+=131;
       if(i%4==0){
         nowY+=88;
