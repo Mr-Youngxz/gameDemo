@@ -1,4 +1,4 @@
 # GameDemo
-A Tiny Game Dem
-Language:C++;IDE:Qt5
+Tiny Game Demo
+C++/Qt5
                           Nov.2019
