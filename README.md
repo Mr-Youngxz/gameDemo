@@ -1,4 +1,3 @@
-# gameDemo
-A Tiny Game Demo【 Study Only】
+# 简单的游戏
 Language:C++;IDE:Qt5
-                          Nov.2019
+                          Mar.2021
