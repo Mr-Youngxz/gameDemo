@@ -9,6 +9,7 @@
 #include "sha1.hpp"
 #include "registwindow.h"
 #include "QMessageBox"
+
 namespace Ui {
   class LoginWindow;
 }
@@ -22,16 +23,16 @@ public:
   ~LoginWindow();
 
 private slots:
-  void on_sub_btn_clicked();
-
   void on_regist_btn_clicked();
+  void on_sub_btn_clicked();
 
 private:
   Ui::LoginWindow *ui = nullptr;
   std::shared_ptr<MainWindow> mainPtr = nullptr;
   std::shared_ptr<RegistWindow> regPtr = nullptr;
   std::shared_ptr<QSqlQuery> query = nullptr;
-  QSqlDatabase * dbconnector = nullptr;
+  std::shared_ptr<QSqlDatabase> dbconnector = nullptr;
+  //QSqlDatabase * dbconnector = nullptr;
   bool LoginActivity();
 };
 

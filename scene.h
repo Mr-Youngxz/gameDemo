@@ -7,7 +7,6 @@
 #include "memory"
 #include "vector"
 #include "iostream"
-#include <unistd.h>
 #include "QTimer"
 class Scene : public QGraphicsScene
 {

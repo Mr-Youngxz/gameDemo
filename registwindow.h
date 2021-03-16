@@ -8,6 +8,9 @@
 #include "sha1.hpp"
 #include "QMessageBox"
 #include "ctime"
+#include "mainwindow.h"
+#include "loginwindow.h"
+
 namespace Ui {
   class RegistWindow;
 }
@@ -26,8 +29,12 @@ private slots:
 private:
   Ui::RegistWindow *ui;
   std::shared_ptr<QSqlQuery> query=nullptr;
+  std::shared_ptr<MainWindow> mainPtr = nullptr;
+
+  //std::shared_ptr<QSqlDatabase> dbconnector = nullptr;
   QSqlDatabase * dbconnector=nullptr;
-  void regist();
+  bool regist();
+  void closeEvent(QCloseEvent *event);
 };
 
 #endif // REGISTWINDOW_H

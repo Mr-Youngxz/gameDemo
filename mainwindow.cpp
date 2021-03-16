@@ -12,8 +12,8 @@ MainWindow::MainWindow(QWidget *parent)
   //当锤子需要移动时候，需要开启对鼠标事件进行跟踪
   this->ui->view->setMouseTracking(true);
   connect(scene,SIGNAL(sendCount(int)),this,SLOT(recivedCount(int)));
-  connect(this,SIGNAL(sendStarted()),scene,SLOT(recivedStarted()));
-  connect(this,SIGNAL(sendStop()),scene,SLOT(recivedStop()));
+  connect(this,SIGNAL(sendStarted()),scene,SLOT(reciviedStarted()));
+  connect(this,SIGNAL(sendStop()),scene,SLOT(reciviedStop()));
 }
 
 void MainWindow::recivedCount(int count){
@@ -22,7 +22,7 @@ void MainWindow::recivedCount(int count){
 
 MainWindow::~MainWindow()
 {
-  std::cout<<"main windows gone"<<std::endl;
+  std::cout<<"main window destoryed"<<std::endl;
   delete ui;
 }
 
@@ -34,6 +34,9 @@ void MainWindow::closeEvent(QCloseEvent *event){
     else
         event->ignore();
 }
+
+
+
 
 void MainWindow::on_start_btn_clicked()
 {

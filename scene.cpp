@@ -70,7 +70,7 @@ void Scene::reciviedStarted(){
     this->timer->start(1000);
 }
 void Scene::reciviedStop(){
-    //shared_ptr指针重置，销毁对象
+    //shared_ptr指针重置,销毁对象
     MiceManage.reset();
     this->timer->stop();
 }
